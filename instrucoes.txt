@@ -1,0 +1,30 @@
+							Memory game
+			Passo a passo para a criação do arquivo engine
+
+1. Criar um array contendo emojis.
+2. Criar um array onde estarão os cards que forem abertos.
+3. Criar uma variável e atribuir a ela uma função para sortear os cards utilizando o objeto Math e operador ternário.
+
+			     		Criação do loop for
+
+4.1 Criar um método 'for' para iterar no array de emojis.
+4.2 Criar dinamicamente um elemento 'div' utilizando o método 'creatElement' e atribuir a uma variável. Este elemento será o card de emojis.
+4.3 Adicionar ao elemento criado dinamicamente uma classe chamada 'item' utilizando o método 'className'.
+4.4 Adicionar internamente no elemento criado os cards sorteados utilizando o método 'innerHTML'.
+4.5 Adicionar o elemento criado dentro do elemento pai utilizando o método 'appendChild'.
+4.6 Adicionar uma função de click no elemento criado e atribuir a invocação de outra função chamada handleClick.
+
+        	Criação da função de verificação de cliques nos cards
+	     
+5.1 Criar uma função chamada handleClick.
+5.2 Na função criada fazer uma verificação se o array de cards abertos é menor que 2.
+5.3 Adicionar o nome de classe 'boxOpen' nos cards abertos utilizando o método 'classList'.
+5.4 Adicionar o elemento 'boxOpen' no array de cards abertos (openCards) utilizando o método 'push'.
+5.5 Iniciar um novo if para definir uma função 'setTimeout' que invocará a função de verificação de match dos cards abertos.
+
+		Criação da função de verificação de match dos cards abertos
+
+6.1 Na função utilizar um if para verificar se o array de cards abertos tem o tamanho igual a 2, ou seja, verificar se dois cards foram abertos e adicionados no array.
+6.2 Comparar os dois cards e adicionar a classe 'boxMatch' caso sejam iguais e remover a classe 'boxOpen' caso não sejam.
+6.3 Limpar o array boxOpen atribuindo um array vazio.
+6.4 Utilizar o método 'querySelectorAll' para obter todos os elementos que tenham a classe 'boxMatch' e verificar se o tamanho é igual ao tamanho do array emojis e apresentar a mensagem de vitórioa caso seja.
